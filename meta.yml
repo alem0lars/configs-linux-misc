@@ -1,0 +1,8 @@
+elems:
+
+  - src:  (nsswitch\.conf)$
+    dst:  /etc/<1>
+    only: f?nsswitch
+
+
+# vim: set filetype=eruby.vim :
