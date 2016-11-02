@@ -1,4 +1,12 @@
 # => inherits: generic <= #
 
 
+hdparm:
+  apm: 127
+  standby: 12
+
+features:
+  - hdparm
+
+
 # vim: set filetype=eruby.yaml :
