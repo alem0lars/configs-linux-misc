@@ -5,7 +5,7 @@ elems:
     only: f?nsswitch
 
   - src:  ^udev/rules\.d/([0-9]+-hdparm\.rules)$
-    dst:  /etc/udev/rules.d/50-hdparm.rules
+    dst:  /etc/udev/rules.d/<1>
     only: f?hdparm
 
 
