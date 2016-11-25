@@ -1,6 +1,6 @@
 hdparm:
   apm: 254
-  standby: 192
+  standby: 224
 
 features:
   - hdparm
