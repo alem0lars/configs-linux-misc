@@ -1,0 +1,9 @@
+hdparm:
+  apm: 254
+  standby: 192
+
+features:
+  - hdparm
+  
+  
+# vim: set filetype=eruby.yaml :
