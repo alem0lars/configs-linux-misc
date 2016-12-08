@@ -40,7 +40,7 @@ group:       compat mymachines
 # shadow:    db files nis
 # group:     db files nis
 
-hosts:       files mymachines mdns_minimal [NOTFOUND=return] dns mdns
+hosts:       files resolve myhostname mymachines mdns_minimal [NOTFOUND=return] dns mdns
 networks:    files dns
 
 services:    db files
