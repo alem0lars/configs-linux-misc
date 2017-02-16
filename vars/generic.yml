@@ -1,5 +1,6 @@
 features:
   - nsswitch
+  - hosts
 
 
 # vim: set filetype=eruby.yaml :

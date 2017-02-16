@@ -1,5 +1,9 @@
 elems:
 
+  - src:  ^(hosts)$
+    dst:  /etc/<1>
+    only: f?hosts
+
   - src:  ^(nsswitch\.conf)$
     dst:  /etc/<1>
     only: f?nsswitch
