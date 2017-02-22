@@ -31,11 +31,16 @@
 # See the License for the specific language governing permissions and          │
 # limitations under the License.                                               │
 #                                                                              │
+# ─────────────────────────────────────────────────────────────────────────────┤
+<% define_locals do
+  computed(:hostname) { `hostname` }
+  computed(:hostname_full) { "#{local! :hostname}.localdomain" }
+end %>
 # ─────────────────────────────────────────────────────────────────────────────┘
 
 
-127.0.0.1 localhost <%= `hostname` %>
-::1       localhost <%= `hostname` %>
+127.0.0.1 localhost <%= local! :hostname_full %> <%= local! :hostname %>
+::1       localhost <%= local! :hostname_full %> <%= local! :hostname %>
 
 
 # vim: set filetype=eruby :
