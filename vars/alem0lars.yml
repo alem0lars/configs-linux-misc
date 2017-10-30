@@ -1,0 +1,29 @@
+# => inherits: generic <= #
+
+
+mimeapps:
+  default_applications:
+    - scheme:
+        - http
+        - https
+        - chrome
+      mime:
+        - text/html
+        - application/x-extension-htm
+        - application/x-extension-html
+        - application/x-extension-shtml
+        - application/xhtml+xml
+        - application/x-extension-xhtml
+        - application/x-extension-xht
+      opener: chromium-browser-chromium.desktop
+    - scheme: ftp
+      opener: filezilla.desktop
+    - scheme: tg
+      opener: telegramdesktop.desktop
+
+features:
+  - mimeapps
+  - mailcap
+
+
+# vim: set filetype=eruby.yaml :

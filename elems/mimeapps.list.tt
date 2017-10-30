@@ -1,0 +1,89 @@
+# ─────────────────────────────────────────────────────────────────────────────┐
+#                                                                              │
+# File inmimeapps_formations:                                                           │
+# - Name:    elems/mimeapps.list.tt                                            │
+# - Summary: MIME/applications mapping.                                        │
+# - Authors:                                                                   │
+#   - Alessandro Molari <molari.alessandro@gmail.com> (alem0lars)              │
+#                                                                              │
+# Project inmimeapps_formations:                                                        │
+#   - Homepage:        https://github.com/alem0lars/configs-linux-misc         │
+#   - Getting started: see README.md in the project root folder                │
+#                                                                              │
+# License: Apache v2.0 (see below)                                             │
+#                                                                              │
+# ─────────────────────────────────────────────────────────────────────────────┤
+#                                                                              │
+# Licensed to the Apache Software Foundation (ASF) under one more contributor  │
+# license agreements.  See the NOTICE file distributed with this work for      │
+# additional inmimeapps_formation regarding copyright ownership. The ASF licenses this  │
+# file to you under the Apache License, Version 2.0 (the "License"); you may   │
+# not use this file except in compliance with the License.                     │
+# You may obtain a copy of the License at                                      │
+#                                                                              │
+#   http://www.apache.org/licenses/LICENSE-2.0                                 │
+#                                                                              │
+# Unless required by applicable law or agreed to in writing, software          │
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT    │
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.             │
+# See the License for the specific language governing permissions and          │
+# limitations under the License.                                               │
+#                                                                              │
+# ─────────────────────────────────────────────────────────────────────────────┤
+<%
+  define_locals do
+    # Default Applications indicates that the applications should be the default
+    # choice for opening that MIME type. For example, JPEG images should be opened
+    # with foo.desktop. This implicitly adds an association between the
+    # application and the MIME type. If there are multiple applications, they are
+    # tried in order.
+    variable "mimeapps.default_applications", as: :default_applications, default: []
+
+    # Added Associations indicates that the applications support opening that MIME
+    # type. For example, bar.desktop and baz.desktop can open JPEG images. This
+    # might affect the application list you see when right-clicking a file in a
+    # file browser.
+    variable "mimeapps.added_associations", as: :added_associations, default: []
+
+    # Removed Associations indicates that the applications do not support that
+    # MIME type. For example, baz.desktop cannot open H.264 video.
+    variable "mimeapps.removed_associations", as: :removed_associations, default: []
+  end
+
+  def mimeapps_format(elem)
+    mimes = []
+    if elem.key? :scheme
+      mimes += Array(elem[:scheme]).map { |s| "x-scheme-handler/#{s}" }
+    end
+    if elem.key? :mime
+      mimes += Array(elem[:mime])
+    end
+    error "Failed to find MIMEs" if mimes.empty?
+
+    mimes.map do |mime|
+      error "Failed to find a valid value for #{out}" unless elem.key? :opener
+      opener = Array(elem[:opener])
+      "#{mime}=#{opener.join(";")}"
+    end.join("\n")
+  end
+%>
+# ─────────────────────────────────────────────────────────────────────────────┘
+
+
+[Default Applications]
+<% local!(:default_applications).each do |elem| %>
+<%= mimeapps_format(elem) %>
+<% end %>
+
+[Added Associations]
+<% local!(:added_associations).each do |elem| %>
+<%= mimeapps_format(elem) %>
+<% end %>
+
+[Removed Associations]
+<% local!(:removed_associations).each do |elem| %>
+<%= mimeapps_format(elem) %>
+<% end %>
+
+
+# vim: set filetype=eruby.conf :
