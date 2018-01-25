@@ -12,8 +12,8 @@ elems:
     dst:  /etc/udev/rules.d/<1>
     only: f?hdparm
 
-  - src:  ^env\.d/([0-9]+hidpi)$
-    dst:  /etc/env.d/<1>
+  - src:  ^environment$
+    dst:  "<%= var! :environment_path %>"
     only: f?hidpi
 
   - src:  ^mimeapps\.list$

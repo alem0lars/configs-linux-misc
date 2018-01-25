@@ -1,12 +1,4 @@
-# => inherits: alem0lars, with-hidpi <= #
-
-
-hdparm:
-  apm: 254
-  standby: 192
-
-features:
-  - hdparm
+# => inherits: alem0lars, with-hidpi, with-voidlinux <= #
 
 
 # vim: set filetype=eruby.yaml :
