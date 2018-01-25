@@ -1,5 +1,9 @@
 elems:
 
+  - src:  ^sudoers$
+    dst:  /etc/sudoers
+    only: f?sudoers
+
   - src:  ^(hosts)$
     dst:  /etc/<1>
     only: f?hosts
