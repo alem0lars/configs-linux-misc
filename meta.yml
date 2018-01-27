@@ -29,5 +29,13 @@ elems:
     dst:  /etc/mailcap
     only: f?mailcap
 
+  - src:  ^fonts/(.+)$
+    dst:  /etc/fonts/conf.avail/<1>
+    only: f?fonts
+    note: |
+      You may want to enable the installed fonts configuration by doing
+      - In Gentoo -> sudo eselect fontconfig enable <name>
+      - In any other Linux distro -> sudo ln -s /etc/fonts/conf.avail/<name> /etc/fonts/conf.d
+
 
 # vim: set filetype=eruby.yaml :

@@ -1,4 +1,4 @@
-# => inherits: alem0lars, with-hidpi, with-voidlinux <= #
+# => inherits: alem0lars, with-hidpi, with-voidlinux, with-fonts <= #
 
 
 # vim: set filetype=eruby.yaml :

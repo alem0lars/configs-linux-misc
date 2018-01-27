@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+     <alias>
+        <family>Hack</family>
+        <prefer>
+            <family>icons-in-terminal</family>
+        </prefer>
+    </alias>
+</fontconfig>
