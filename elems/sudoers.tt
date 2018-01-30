@@ -29,7 +29,7 @@
 ## Cmnd alias specification
 ##
 
-Cmnd_Alias REBOOT = /usr/bin/halt, /usr/bin/poweroff, /usr/bin/shutdown, /usr/bin/reboot
+Cmnd_Alias REBOOT = /usr/bin/halt, /usr/bin/poweroff, /usr/bin/shutdown, /usr/bin/reboot, /usr/bin/zzz, /usr/bin/ZZZ
 
 ##
 ## Defaults specification
