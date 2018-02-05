@@ -1,7 +1,11 @@
 elems:
 
-  - src:  ^sudoers$
-    dst:  /etc/sudoers
+  - src:  ^(sysctl.conf)$
+    dst:  /etc/<1>
+    only: f?sysctl
+
+  - src:  ^(sudoers)$
+    dst:  /etc/<1>
     only: f?sudoers
 
   - src:  ^(hosts)$

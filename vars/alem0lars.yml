@@ -15,7 +15,7 @@ mimeapps:
         - application/xhtml+xml
         - application/x-extension-xhtml
         - application/x-extension-xht
-      opener: firefox-bin
+      opener: firefox.desktop
     - scheme: ftp
       opener: filezilla.desktop
     - scheme: tg

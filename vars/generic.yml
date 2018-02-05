@@ -2,6 +2,7 @@ features:
   - nsswitch
   - hosts
   - sudoers
+  - sysctl
 
 
 # vim: set filetype=eruby.yaml :
