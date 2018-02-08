@@ -1,0 +1,20 @@
+<% if has_feature? :hidpi %>
+
+<%# Honor screen DPI in Qt5 %>
+QT_AUTO_SCREEN_SCALE_FACTOR=1
+<%# Worse alternative: %>
+<%# QT_AUTO_SCREEN_SCALE_FACTOR=0 %>
+<%# QT_SCALE_FACTOR=2 %>
+
+<%# Scale GTK3 UI elements by a factor of two %>
+GDK_SCALE=2
+<%# Undo scaling of text in GTK3 %>
+GDK_DPI_SCALE=0.5
+
+<%# Scale UI elements by a factor of 1.5 in Elementary (EFL) %>
+ELM_SCALE=1.5
+
+<% end %>
+
+
+<%# vim: set filetype=eruby.sh %>
