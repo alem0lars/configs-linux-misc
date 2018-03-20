@@ -20,6 +20,8 @@ mimeapps:
       opener: filezilla.desktop
     - scheme: tg
       opener: telegramdesktop.desktop
+    - scheme: nozbe
+      opener: Nozbe
 
 features:
   - mimeapps
