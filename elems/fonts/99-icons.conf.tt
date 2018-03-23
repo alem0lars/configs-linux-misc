@@ -8,4 +8,11 @@
       <family>icons-in-terminal</family>
     </prefer>
   </alias>
+
+  <alias>
+    <family>Roboto</family>
+    <prefer>
+      <family>icons-in-terminal</family>
+    </prefer>
+  </alias>
 </fontconfig>
