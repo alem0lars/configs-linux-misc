@@ -24,7 +24,9 @@ mimeapps:
     - mime:
       - application/pdf
       - application/x-pdf
-      opener: master-pdf-editor.desktop
+      - application/x-bzpdf
+      - application/x-gzpdf
+      opener: masterpdfeditor.desktop
     # Application-specific protocols
     - scheme: tg
       opener: telegramdesktop.desktop

@@ -27,7 +27,7 @@ elems:
   - src:  ^mimeapps\.list$
     dst:  /etc/xdg/mimeapps.list
     only: f?mimeapps
-    note: You should remove user-wide mimeapps files, usually located at ~/.mimeapps.list and ~/.local/share/applications/mimeapps.list
+    note: You should remove user-wide mimeapps files, usually located at ~/.mimeapps.list, ~/.config/mimeapps.list, ~/.local/share/applications/mimeapps.list
 
   - src:  ^mailcap$
     dst:  /etc/mailcap
