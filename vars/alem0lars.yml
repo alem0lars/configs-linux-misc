@@ -3,6 +3,10 @@
 
 mimeapps:
   default_applications:
+    # FTP protocol
+    - scheme: ftp
+      opener: filezilla.desktop
+    # HTTP protocol, HTML format
     - scheme:
         - http
         - https
@@ -16,8 +20,12 @@ mimeapps:
         - application/x-extension-xhtml
         - application/x-extension-xht
       opener: firefox.desktop
-    - scheme: ftp
-      opener: filezilla.desktop
+    # PDF format
+    - mime:
+      - application/pdf
+      - application/x-pdf
+      opener: master-pdf-editor
+    # Application-specific protocols
     - scheme: tg
       opener: telegramdesktop.desktop
     - scheme: nozbe
