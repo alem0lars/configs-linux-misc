@@ -17,5 +17,11 @@ ELM_SCALE=1.5
 
 <% end %>
 
+<% if has_feature? :java %>
 
-<%# vim: set filetype=eruby.sh %>
+_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
+
+<% end %>
+
+
+<%# vim: set filetype=eruby.sh : %>

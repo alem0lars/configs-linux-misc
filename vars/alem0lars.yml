@@ -36,6 +36,7 @@ mimeapps:
 features:
   - mimeapps
   - mailcap
+  - java
 
 
 # vim: set filetype=eruby.yaml :
