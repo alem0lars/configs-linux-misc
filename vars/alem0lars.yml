@@ -19,14 +19,14 @@ mimeapps:
         - application/xhtml+xml
         - application/x-extension-xhtml
         - application/x-extension-xht
-      opener: firefox.desktop
+      opener: chromium.desktop
     # PDF format
     - mime:
       - application/pdf
       - application/x-pdf
       - application/x-bzpdf
       - application/x-gzpdf
-      opener: masterpdfeditor.desktop
+      opener: masterpdfeditor4.desktop
     # Application-specific protocols
     - scheme: tg
       opener: telegramdesktop.desktop
