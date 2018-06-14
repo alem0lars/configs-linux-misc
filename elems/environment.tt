@@ -36,15 +36,8 @@ end
 
 def java_options
   [
-    # Use OpenGL
-    "-Dsun.java2d.opengl=true",
-    # Use GTK look&feel instead of default swing
-    "-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel",
     # Font
-    "-Dawt.useSystemAAFontSettings=gasp",
-    # DPI
-    "-Dsun.java2d.dpiaware=true",
-    has_feature?(:hidpi) ? "-Dprism.allowhidpi=true" : ""
+    "-Dawt.useSystemAAFontSettings=gasp"
   ].compact.join(" ")
 end
 %>
