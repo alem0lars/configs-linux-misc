@@ -20,6 +20,10 @@ mimeapps:
         - application/x-extension-xhtml
         - application/x-extension-xht
       opener: chromium.desktop
+    # Emails
+    - mime:
+      - application/x-extension-eml
+      opener: thunderbird.desktop
     # PDF format
     - mime:
       - application/pdf
@@ -27,6 +31,12 @@ mimeapps:
       - application/x-bzpdf
       - application/x-gzpdf
       opener: foxitreader.desktop
+    # Plain documents
+    - mime:
+      - application/x-extension-txt
+      - application/x-shellscript
+      - text/plain
+      opener: sublime_text_3.desktop
     # Application-specific protocols
     - scheme: tg
       opener: telegramdesktop.desktop
