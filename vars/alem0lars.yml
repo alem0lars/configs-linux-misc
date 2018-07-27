@@ -30,7 +30,11 @@ mimeapps:
       - application/x-pdf
       - application/x-bzpdf
       - application/x-gzpdf
-      opener: foxitreader.desktop
+      opener: masterpdfeditor5.desktop
+    # EPUB format
+    - mime:
+      - application/epub+zip
+      opener: sigil.desktop
     # Plain documents
     - mime:
       - application/x-extension-txt
