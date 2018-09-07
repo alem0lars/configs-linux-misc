@@ -41,6 +41,9 @@ mimeapps:
       - application/x-shellscript
       - text/plain
       opener: sublime_text_3.desktop
+    # Folders
+    - mime:   inode/directory
+      opener: nemo.desktop
     # Application-specific protocols
     - scheme: tg
       opener: telegramdesktop.desktop
