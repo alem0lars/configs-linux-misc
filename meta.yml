@@ -1,6 +1,6 @@
 elems:
 
-  - src:  ^(sysctl.conf)$
+  - src:  ^(sysctl\.conf)$
     dst:  /etc/<1>
     only: f?sysctl
 
@@ -40,6 +40,10 @@ elems:
       You may want to enable the installed fonts configuration by doing
       - In Gentoo -> sudo eselect fontconfig enable <name>
       - In any other Linux distro -> sudo ln -s /etc/fonts/conf.avail/<name> /etc/fonts/conf.d
+
+  - src:  ^(geoclue\.conf)$
+    dst:  /etc/geoclue/<1>
+    only: f?geoclue
 
 
 # vim: set filetype=eruby.yaml :

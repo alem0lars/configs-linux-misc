@@ -55,4 +55,4 @@ automount:   files
 aliases:     files
 
 
-# vim: set filetype=eruby.conf :
+# vim: set filetype=eruby :

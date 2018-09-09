@@ -54,6 +54,7 @@ features:
   - mimeapps
   - mailcap
   - java
+  - geoclue
 
 
 # vim: set filetype=eruby.yaml :
