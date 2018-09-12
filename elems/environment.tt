@@ -30,16 +30,17 @@
 # limitations under the License.                                               │
 #                                                                              │
 # ─────────────────────────────────────────────────────────────────────────────┤
-<% define_locals do
-  variable :editor
-end
+<%
+  define_locals do
+    variable :editor
+  end
 
-def java_options
-  [
-    # Font
-    "-Dawt.useSystemAAFontSettings=gasp"
-  ].compact.join(" ")
-end
+  def java_options
+    options = []
+    options << "-Dawt.useSystemAAFontSettings=gasp" # Font
+    options << "-Dsun.java2d.uiScale=2" if has_feature? :hidpi
+    options.compact.join(" ")
+  end
 %>
 
 # ─────────────────────────────────────────────────────────────────────────────┘
@@ -65,9 +66,7 @@ ELM_SCALE=1.5
 <% end %>
 
 <% if has_feature? :java %>
-
 _JAVA_OPTIONS='<%= java_options %>'
-
 <% end %>
 
 <% if local? :editor %>
