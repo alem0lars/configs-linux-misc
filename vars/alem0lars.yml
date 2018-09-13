@@ -44,7 +44,7 @@ mimeapps:
     # Folders
     - mime:   inode/directory
       opener: nemo.desktop
-    # Application-specific protocols
+    # Application-specific
     - scheme: tg
       opener: telegramdesktop.desktop
     - scheme: nozbe
