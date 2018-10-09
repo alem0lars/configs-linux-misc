@@ -1,0 +1,52 @@
+# => inherits: generic, with-hidpi, with-archlinux, with-neovim <= #
+
+mimeapps:
+  default_applications:
+    # FTP protocol
+    - scheme: ftp
+      opener: filezilla.desktop
+    # HTTP protocol, HTML format
+    - scheme:
+        - http
+        - https
+        - chrome
+      mime:
+        - text/html
+        - application/x-extension-htm
+        - application/x-extension-html
+        - application/x-extension-shtml
+        - application/xhtml+xml
+        - application/x-extension-xhtml
+        - application/x-extension-xht
+      opener: chromium.desktop
+    # Emails
+    # PDF format
+    - mime:
+      - application/pdf
+      - application/x-pdf
+      - application/x-bzpdf
+      - application/x-gzpdf
+      opener: masterpdfeditor5.desktop
+    # EPUB format
+    # Plain documents
+    - mime:
+      - application/x-extension-txt
+      - application/x-shellscript
+      - text/plain
+      opener: sublime_text_3.desktop
+    # Folders
+    - mime:   inode/directory
+      opener: nemo.desktop
+    # Application-specific
+    - scheme: tg
+      opener: telegramdesktop.desktop
+    - scheme: nozbe
+      opener: Nozbe
+
+features:
+  - mimeapps
+  - mailcap
+  - java
+  - geoclue
+
+# vim: set filetype=eruby.yaml :
