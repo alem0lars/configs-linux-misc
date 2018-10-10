@@ -45,5 +45,9 @@ elems:
     dst:  /etc/geoclue/<1>
     only: f?geoclue
 
+  - src:  ^modules-load.d/udl.conf$
+    dst:  /etc/modules-load.d/udl.conf
+    only: f?displaylink
+
 
 # vim: set filetype=eruby.yaml :
