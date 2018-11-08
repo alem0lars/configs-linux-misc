@@ -69,6 +69,10 @@ ELM_SCALE=1.5
 _JAVA_OPTIONS='<%= java_options %>'
 <% end %>
 
+<% if has_feature? :qt5ct %>
+export QT_QPA_PLATFORMTHEME="qt5ct"
+<% end %>
+
 <% if local? :editor %>
 EDITOR=<%= local! :editor %>
 <% end %>

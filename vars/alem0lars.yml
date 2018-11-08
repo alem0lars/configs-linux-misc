@@ -55,6 +55,7 @@ features:
   - mailcap
   - java
   - geoclue
+  - qt5ct
 
 
 # vim: set filetype=eruby.yaml :
