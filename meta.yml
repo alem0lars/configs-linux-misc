@@ -16,6 +16,10 @@ elems:
     dst:  /etc/<1>
     only: f?nsswitch
 
+  - src:  ^polkit-rules/([0-9]+-blueman\.rules)$
+    dst:  /etc/polkit-1/rules.d/<1>
+    only: f?blueman
+
   - src:  ^udev/rules\.d/([0-9]+-hdparm\.rules)$
     dst:  /etc/udev/rules.d/<1>
     only: f?hdparm

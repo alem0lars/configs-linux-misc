@@ -30,7 +30,7 @@ mimeapps:
       - application/x-pdf
       - application/x-bzpdf
       - application/x-gzpdf
-      opener: foxitreader.desktop
+      opener: org.gnome.Evince.desktop
     # EPUB format
     - mime:
       - application/epub+zip
